@@ -1,0 +1,44 @@
+all:
+  children:
+    routers:
+      hosts:
+        vmx1:
+          ansible_host: "192.168.10.2"
+        vmx2:
+          ansible_host: "192.168.10.3"
+        vmx3:
+          ansible_host: "192.168.10.4"
+        vmx4:
+          ansible_host: "192.168.10.5"
+        vmx5:
+          ansible_host: "192.168.10.6"
+        vmx6:
+          ansible_host: "192.168.10.7"
+        vmx7:
+          ansible_host: "192.168.10.8"
+        vmx8:
+          ansible_host: "192.168.10.9"
+        vmx9:
+          ansible_host: "192.168.10.10"
+        vmx10:
+          ansible_host: "192.168.10.11"
+        vmx11:
+          ansible_host: "192.168.10.12"
+        vmx12:
+          ansible_host: "192.168.10.13"
+        vmx13:
+          ansible_host: "192.168.10.14"
+        vmx14:
+          ansible_host: "192.168.10.15"
+        vmx15:
+          ansible_host: "192.168.10.16"
+        vmx16:
+          ansible_host: "192.168.10.17"
+        vmx17:
+          ansible_host: "192.168.10.18"
+        vmx18:
+          ansible_host: "192.168.10.19"
+        vmx19:
+          ansible_host: "192.168.10.20"
+        vmx20:
+          ansible_host: "192.168.10.21"
