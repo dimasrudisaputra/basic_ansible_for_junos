@@ -1,0 +1,29 @@
+---
+### ---------------------------------------------------------------------------
+### CONFIGURE OUR DEVICE WITH BASIC PARAMETERS
+### ---------------------------------------------------------------------------
+- hosts: all
+  connection: local
+  gather_facts: False
+  become: False
+  roles: 
+    - juniper.junos
+  tasks:
+
+    - name: "### SEND CLI CONFIGURATION COMMANDS TO REMOTE DEVICE ###"
+      juniper_junos_config:
+
+        # declare our connection parameters
+        user: "root"
+        passwd: "juniper123"
+        timeout: 240
+
+        rollback: 1
+      # store the output of our configuration changes to a new object called `result`
+      register: response
+
+    # if there was any output from the change above, then print the result to the screen
+    - name: "### PRINT THE RESULT TO CONSOLE ###"
+      debug:
+        var: response.diff_lines
+      when: response.diff_lines is defined
